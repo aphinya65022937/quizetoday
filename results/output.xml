@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.10.5 on win32)" generated="2024-01-29T10:33:14.846376" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="C:\Users\anfield\Desktop\test">
+<suite id="s1-s1" name="Quizx" source="C:\Users\anfield\Desktop\test\quizx.robot">
+<test id="s1-s1-t1" name="Example Test Case" line="9">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-01-29T10:33:15.064394" level="INFO">Opening browser 'Chrome' to base url 'http://automationexercise.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-01-29T10:33:15.063387" elapsed="5.066258"/>
+</kw>
+<kw name="Verify Home Page">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//header[@id='header']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-01-29T10:33:20.130640" elapsed="0.013993"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-01-29T10:33:20.293528" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-01-29T10:33:20.294531" level="FAIL">Page should have contained element 'xpath=//section[@id='cart_items']' but did not.</msg>
+<arg>xpath=//section[@id='cart_items']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="FAIL" start="2024-01-29T10:33:20.144633" elapsed="0.152894">Page should have contained element 'xpath=//section[@id='cart_items']' but did not.</status>
+</kw>
+<status status="FAIL" start="2024-01-29T10:33:20.129645" elapsed="0.167882">Page should have contained element 'xpath=//section[@id='cart_items']' but did not.</status>
+</kw>
+<kw name="Click Cart Items">
+<status status="NOT RUN" start="2024-01-29T10:33:20.297527" elapsed="0.000999"/>
+</kw>
+<kw name="Verify Cart Page">
+<status status="NOT RUN" start="2024-01-29T10:33:20.298526" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-01-29T10:33:20.298526" elapsed="2.128886"/>
+</kw>
+<status status="FAIL" start="2024-01-29T10:33:15.062387" elapsed="7.367026">Page should have contained element 'xpath=//section[@id='cart_items']' but did not.</status>
+</test>
+<status status="FAIL" start="2024-01-29T10:33:14.873185" elapsed="7.560213"/>
+</suite>
+<status status="FAIL" start="2024-01-29T10:33:14.850376" elapsed="7.585024"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Test">Test</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Quizx">Test.Quizx</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
